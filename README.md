@@ -109,3 +109,11 @@ Please read here : http://docs.floydhub.com/getstarted/quick_start_jupyter/
 Once environment has been installed and setup you can run following:
 
 floyd run --gpu --env tensorflow-1.1 --mode jupyter
+
+ 
+
+If you need to run on a faster GPU you can use:
+
+floyd run --gpu+ --env tensorflow-1.3 --mode jupyter
+
+ 
