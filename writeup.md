@@ -180,7 +180,7 @@ worse results.**
 
 **​**
 
-### **4. Getting the validation set accuracy to be at least 0.93.** 
+### **4. Getting the validation set accuracy to be at least 0.93.**
 
 To get the validation accuracy more than 0.93 i went with **data images
 augmentation.**
@@ -244,7 +244,7 @@ It means that the network is a little bit **OVER-FITTING.**
 
  
 
-### **Maybe we just need need do lower the batch size in order to do more optimization cycles ?**
+### Maybe we just need need to **lower** **the** **batch** **size** in order to do more optimization cycles ?
 
  
 
@@ -297,7 +297,7 @@ accuracy of 80%. This compares favorably to the accuracy on the test set of ...
 
  
 
-**(Optional) Visualizing the Neural Network** 
-----------------------------------------------
+**(Optional) Visualizing the Neural Network**
+---------------------------------------------
 
  
