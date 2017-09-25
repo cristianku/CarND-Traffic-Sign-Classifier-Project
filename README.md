@@ -38,13 +38,13 @@ Code execution
 **writeup.md** contains the explanation how the solutions to the problem has
 been resolved.
 
-**traffic_signs.data-00000-of-00001 ** saved Model file
+**traffic_signs.data-00000-of-00001** saved Model file
 
 **traffic_signs.index** saved Model file
 
-**traffic_signs.meta  **saved Model file
+**traffic_signs.meta** saved Model file
 
-**checkpoint ** used by Jupyter Notebook
+**checkpoint** used by Jupyter Notebook
 
  
 
