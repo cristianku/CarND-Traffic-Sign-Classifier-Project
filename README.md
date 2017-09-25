@@ -1,3 +1,5 @@
+**Udacity Self Driving Car Nanodegree Program. September 2017 .**
+
 Project: Build a Traffic Sign Recognition Program
 -------------------------------------------------
 
@@ -6,114 +8,107 @@ Project: Build a Traffic Sign Recognition Program
 Overview
 --------
 
-In this project, you will use what you've learned about deep neural networks and
-convolutional neural networks to classify traffic signs. You will train and
-validate a model so it can classify traffic sign images using the [German
-Traffic Sign
-Dataset](http://benchmark.ini.rub.de/?section=gtsrb&subsection=dataset). After
-the model is trained, you will then try out your model on images of German
-traffic signs that you find on the web.
-
-We have included an Ipython notebook that contains further instructions and
-starter code. Be sure to download the [Ipython
-notebook](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb).
-
-We also want you to create a detailed writeup of the project. Check out the
-[writeup
-template](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/writeup_template.md)
-for this project and use it as a starting point for creating your own writeup.
-The writeup can be either a markdown file or a pdf document.
-
-To meet specifications, the project will require submitting three files: \* the
-Ipython notebook with the code \* the code exported as an html file \* a writeup
-report either as a markdown or pdf file
-
-Creating a Great Writeup
-------------------------
-
-A great writeup should include the [rubric
-points](https://review.udacity.com/#!/rubrics/481/view) as well as your
-description of how you addressed each point. You should include a detailed
-description of the code used in each step (with line-number references and code
-snippets where necessary), and links to other supporting documents or external
-references. You should include images in your writeup to demonstrate how your
-code works with examples.
-
-All that said, please be concise! We're not looking for you to write a book
-here, just a brief description of how you passed each rubric point, and
-references to the relevant code :).
-
-You're not required to use markdown for your writeup. If you use another method
-please just submit a pdf of your writeup.
-
-The Project
------------
-
-The goals / steps of this project are the following: \* Load the data set \*
-Explore, summarize and visualize the data set \* Design, train and test a model
-architecture \* Use the model to make predictions on new images \* Analyze the
-softmax probabilities of the new images \* Summarize the results with a written
-report
-
-### Dependencies
-
-This lab requires:
-
--   [CarND Term1 Starter
-    Kit](https://github.com/udacity/CarND-Term1-Starter-Kit)
-
-The lab environment can be created with CarND Term1 Starter Kit. Click
-[here](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md)
-for the details.
-
-### Dataset and Repository
-
-1.  Download the data set. The classroom has a link to the data set in the
-    "Project Instructions" content. This is a pickled dataset in which we've
-    already resized the images to 32x32. It contains a training, validation and
-    test set.
-
-2.  Clone the project, which contains the Ipython notebook and the writeup
-    template.
-
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ sh
-    git clone https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project
-    cd CarND-Traffic-Sign-Classifier-Project
-    jupyter notebook Traffic_Sign_Classifier.ipynb
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-### Requirements for Submission
-
-Follow the instructions in the `Traffic_Sign_Classifier.ipynb` notebook and
-write the project report using the writeup template as a guide,
-`writeup_template.md`. Submit the project code and writeup document.
-
-How to write a README
----------------------
-
-A well written README file can enhance your project and portfolio. Develop your
-abilities to create professional README files by completing [this free
-course](https://www.udacity.com/course/writing-readmes--ud777).
+The aim is to **classify traffic signs ** using **Python** and Tensorflow
+Convolutional Neural Networks
 
  
 
-How to run the code on a Server
--------------------------------
-
-This code can be run on floydhub instead of Amazon EC2:
-
-Please read here : http://docs.floydhub.com/getstarted/quick_start_jupyter/
+This is the second project of the Nanodegree Course.
 
  
 
-Once environment has been installed and setup you can run following:
-
-floyd run --gpu --env tensorflow-1.1 --mode jupyter
+Please check the **writeup.md**, where the steps toward the final result are
+explained in details.
 
  
 
-If you need to run on a faster GPU you can use:
+List of the files
+-----------------
 
-floyd run --gpu+ --env tensorflow-1.3 --mode jupyter
+T**raffic_Sign_Classifier.ipynb **   contains the Program code to run ( how to
+run see below )
+
+Traffic_Sign_Classifier.ipynb**.html**  Generated from Jupyter Notebook
+containing the Code execution
+
+**writeup.md**                               contains the explanation how the
+solutions to the problem has been resolved.
+
+ 
+
+List of the folders
+-------------------
+
+**Test_images** contains the input images for the processing of lane detection
+
+**Test_images_output** is the folder containing the processed images using
+
+ 
+
+**Test_videos** contains the input videos for the processing of lane detection
+
+**Test_videos_output** contains the processed videos using **P1.ipynb**
+
+ 
+
+**Writeup_images** contains the images for the writeup.md document
+
+ 
+
+**How to run the code**
+-----------------------
+
+ 
+
+**Step 1:** Set up the [CarND Term1 Starter
+Kit](https://classroom.udacity.com/nanodegrees/nd013/parts/fbf77062-5703-404e-b60c-95b78b2f3f9e/modules/83ec35ee-1e02-48a5-bdb7-d244bd47c2dc/lessons/8c82408b-a217-4d09-b81d-1bda4c6380ef/concepts/4f1870e0-3849-43e4-b670-12e6f2d4b7a7)
+if you haven't already.
+
+**Step 2:** Open a command line in the **Project folder** ( CarND-LaneLines-P1 )
+
+**Step 3:** Open Jupyter Notebook
+
+`> jupyter notebook`**P1.ipynb**
+
+A browser window will appear showing the contents of the current directory.
+
+**Step 3:** Run the code using SHIFT+ ENTER
+
+ 
+
+If you don’t have Python / Jupyter Notebook installed, you can download Anaconda
+Package:<https://www.anaconda.com/download/>
+
+ 
+
+**Project requirements check​**
+------------------------------
+
+ 
+
+Have all project files been included with the submission?
+
+**yes**, The project submission includes all required files
+
+Does the pipeline for line identification take road images from a video as input
+and return an annotated video stream as output?
+
+**Yes,** The output video is an annotated version of the input video.
+
+Has a pipeline been implemented that uses the helper functions and / or other
+code to roughly identify the left and right lane lines with either line segments
+or solid lines? (example solution included in the repository output:
+raw-lines-example.mp4)
+
+**Yes,** In a rough sense, the left and right lane lines are accurately
+annotated throughout almost all of the video. Annotations can be segmented or
+solid lines
+
+Have detected line segments been filtered / averaged / extrapolated to map out
+the full extent of the left and right lane boundaries? (example solution
+included in the repository: P1_example.mp4)
+
+**Yes,** Visually, the left and right lane lines are accurately annotated by
+solid lines throughout most of the video.
 
  
