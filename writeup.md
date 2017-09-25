@@ -52,7 +52,7 @@ Number of classes = 43
 
 ### **2. Exploratory visualization**
 
-![](images/exp.png)
+![](writeup_images/exp.png)
 
 **Design and Test a Model Architecture**
 ----------------------------------------
@@ -119,7 +119,7 @@ loss_operation = **tf.reduce_mean**(cross_entropy)
 EPOCH 10 ... Training ( Loss= 0.180, Acc= 0.951 ) Validation ( Loss= 0.661, Acc=
 0.818 )
 
-![](images/try1.png)
+![](writeup_images/try1.png)
 
 As you can see the Accuracy on the training is .95 quite high, but the model is
 overfitting so it is not able to predict on the Validation set correctly ( .81 ,
@@ -244,7 +244,7 @@ It means that the network is a little bit **OVER-FITTING.**
 
  
 
-### Maybe we just need need to **lower** **the** **batch** **size** in order to do more optimization cycles ?
+### Maybe we just need need to **lower the batch size** in order to do more optimization cycles ?
 
  
 

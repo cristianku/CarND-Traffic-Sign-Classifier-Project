@@ -5,15 +5,17 @@ Project: Build a Traffic Sign Recognition Program
 
 <http://www.udacity.com/drive>
 
+ 
+
 Overview
 --------
 
-The aim is to **classify traffic signs ** using **Python** and Tensorflow
+The aim is to **classify traffic signs**  using **Python** and Tensorflow
 Convolutional Neural Networks
 
  
 
-This is the second project of the Nanodegree Course.
+This is the second project of the Udacity Self Driving Car Nanodegree Program.
 
  
 
@@ -22,32 +24,32 @@ explained in details.
 
  
 
-List of the files
------------------
+Files list
+----------
 
 **README.md**
 
-**Traffic_Sign_Classifier.ipynb **   contains the Program code to run ( how to
-run see below )
+**Traffic_Sign_Classifier.ipynb**  contains the Program code to run ( how to run
+see below )
 
-**Traffic_Sign_Classifier.html**      Generated from Jupyter Notebook containing
-the Code execution
+**Traffic_Sign_Classifier.html** Generated from Jupyter Notebook containing the
+Code execution
 
-**writeup.md**                                contains the explanation how the
-solutions to the problem has been resolved.
+**writeup.md** contains the explanation how the solutions to the problem has
+been resolved.
 
  
 
-List of the folders
--------------------
+Folders list
+------------
 
 **additional_test_images**
 
 contains the Image used for testing the trained models. This images are both
 from German Traffic Signs from the web and picture taken in Warsaw from real
-Traffic Signs contains the input images for the processing of lane detection
+Traffic Signs contains the input images for Trained Model Test
 
-**writeup_images **
+**writeup_images**
 
 contains the visualization images used in the **writeup.md**
 
@@ -66,7 +68,7 @@ if you haven't already.
 
 **Step 3:** Open Jupyter Notebook
 
-`> jupyter notebook `**Traffic_Sign_Classifier.ipynb**
+`> jupyter notebook`**Traffic_Sign_Classifier.ipynb**
 
 A browser window will appear showing the contents of the current directory.
 
@@ -92,7 +94,7 @@ the EU Frankfurt zone.
 
  
 
--   Have all project files been included with the submission?** Yes**
+-   Have all project files been included with the submission? **Yes**
 
 -   Does the submission includes a basic summary of the data set ? **Yes**
 
@@ -124,7 +126,7 @@ the EU Frankfurt zone.
 
 -   Does the submission documents the performance of the model when tested on
     the captured images. The performance on the new images is compared to the
-    accuracy results of the test set ?** Yes**
+    accuracy results of the test set ? **Yes**
 
 -   Does the submission include the top five softmax probabilities of the
     predictions on the captured images and discussion how certain or uncertain
