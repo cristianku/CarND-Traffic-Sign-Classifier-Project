@@ -286,9 +286,56 @@ means longer to train.. too long.
 
  
 
- 
+And now it look quite good ! Validation accuracy** 0.976!**
 
-**​**
+Maybe the learning rate was too small, but also such bigger network require more
+epochs to be trained ( considering the dropout )
+
+![](writeup_images/aug2.PNG)
+
+Training.... size : 104397
+
+EPOCH 10 ... Training ( Loss= 49.040, Acc= 0.915 ) Validation ( Loss= 70.850,
+Acc= 0.905 )  
+EPOCH 20 ... Training ( Loss= 21.086, Acc= 0.961 ) Validation ( Loss= 76.042,
+Acc= 0.937 )  
+EPOCH 30 ... Training ( Loss= 10.192, Acc= 0.979 ) Validation ( Loss= 66.077,
+Acc= 0.953 )  
+EPOCH 40 ... Training ( Loss= 8.260, Acc= 0.984 ) Validation ( Loss= 131.192,
+Acc= 0.960 )  
+EPOCH 50 ... Training ( Loss= 7.589, Acc= 0.986 ) Validation ( Loss= 57.046,
+Acc= 0.966 )  
+EPOCH 60 ... Training ( Loss= 5.241, Acc= 0.989 ) Validation ( Loss= 48.378,
+Acc= 0.964 )  
+EPOCH 70 ... Training ( Loss= 5.430, Acc= 0.990 ) Validation ( Loss= 58.043,
+Acc= 0.963 )  
+EPOCH 80 ... Training ( Loss= 3.902, Acc= 0.992 ) Validation ( Loss= 58.414,
+Acc= 0.971 )  
+EPOCH 90 ... Training ( Loss= 9.074, Acc= 0.986 ) Validation ( Loss= 85.353,
+Acc= 0.962 )  
+EPOCH 100 ... Training ( Loss= 4.512, Acc= 0.992 ) Validation ( Loss= 95.276,
+Acc= 0.966 )  
+EPOCH 110 ... Training ( Loss= 5.576, Acc= 0.991 ) Validation ( Loss= 111.279,
+Acc= 0.962 )  
+EPOCH 120 ... Training ( Loss= 8.030, Acc= 0.989 ) Validation ( Loss= 60.962,
+Acc= 0.965 )  
+EPOCH 130 ... Training ( Loss= 2.281, Acc= 0.996 ) Validation ( Loss= 76.857,
+Acc= 0.972 )  
+EPOCH 140 ... Training ( Loss= 3.087, Acc= 0.995 ) Validation ( Loss= 62.464,
+Acc= 0.968 )  
+EPOCH 150 ... Training ( Loss= 4.320, Acc= 0.994 ) Validation ( Loss= 95.609,
+Acc= 0.971 )  
+EPOCH 160 ... Training ( Loss= 3.088, Acc= 0.995 ) Validation ( Loss= 102.101,
+Acc= 0.970 )  
+EPOCH 170 ... Training ( Loss= 2.999, Acc= 0.995 ) Validation ( Loss= 96.940,
+Acc= 0.972 )  
+EPOCH 180 ... Training ( Loss= 2.842, Acc= 0.995 ) Validation ( Loss= 39.783,
+Acc= 0.975 )  
+EPOCH 190 ... Training ( Loss= 1.551, Acc= 0.997 ) Validation ( Loss= 171.316,
+Acc= 0.978 )  
+EPOCH 200 ... Training ( Loss= 2.011, Acc= 0.997 ) Validation ( Loss= 71.758,
+Acc= 0.976 )  
+Model saved
 
  
 
@@ -306,84 +353,33 @@ means longer to train.. too long.
 Here are five German traffic signs that I found on the web + some real images
 from my cam:
 
-1
-
-![](additional_test_images/02.png)
-
-2
-
-![](additional_test_images/09_1.jpg)
-
-3
-
-![](additional_test_images/10.png)
-
-4
-
-![](additional_test_images/12_priority.png)
-
-5
-
-![](additional_test_images/13.png)
-
-6
-
-![](additional_test_images/13_2.jpg)
-
-7
-
-![](additional_test_images/14.png)
-
-8
-
-![](additional_test_images/14_1.jpg)
-
-9
-
-![](additional_test_images/15.png)
-
-10
-
-![](additional_test_images/25.png)
-
-11
-
-![](additional_test_images/27.png)
-
- 
+![](writeup_images/new images.PNG)
 
  
 
 **The 2nd might be difficult to classify because of the men drawing inside .**
 
-**The 6th might be difficult because is a “destroyed” sign**
+**The 4th might be difficult because is a “destroyed” sign**
 
  
 
 Here are the results of the prediction:
 
-| Number | Image                                        | Prediction |
-|--------|----------------------------------------------|------------|
-| 1      | Speed limit 50 km/h                          |            |
-| 2      | No Passing                                   |            |
-| 3      | No passing for vehicles over 3.5 metric tons |            |
-| 4      | Priority Road                                |            |
-| 5      | Yield                                        |            |
-| 6      | Yield                                        |            |
-| 7      | Stop                                         |            |
-| 8      | Stop                                         |            |
-| 9      | No Passing                                   |            |
-| 10     | Road Work                                    |            |
-| 11     | Pedestrians                                  |            |
+![](writeup_images/prediction on new images.PNG)
 
  
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an
-accuracy of 80%. This compares favorably to the accuracy on the test set of ...
-
- 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Accuracy = 72% ( Correct Predictions = 8 on 11 images processed )
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ### 3. FIRST 5 SOFTMAX PROBABILITIES
+
+![](writeup_images/TOP 5 SOFTMAX - 1.PNG)
+
+![](writeup_images/TOP 5 SOFTMAX - 2.PNG)
+
+![](writeup_images/TOP 5 SOFTMAX - 3.PNG)
 
  
 
@@ -391,3 +387,11 @@ accuracy of 80%. This compares favorably to the accuracy on the test set of ...
 ---------------------------------------------
 
  
+
+ 
+
+![](writeup_images/visualizing 1.PNG)
+
+![](writeup_images/visualizing 2.PNG)
+
+![](writeup_images/visualizing 3.PNG)

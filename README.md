@@ -10,7 +10,7 @@ Project: Build a Traffic Sign Recognition Program
 Overview
 --------
 
-The aim is to **classify traffic signs**  using **Python** and Tensorflow
+The aim is to **classify traffic signs** using **Python** and Tensorflow
 Convolutional Neural Networks
 
  
@@ -29,7 +29,7 @@ Files list
 
 **README.md**
 
-**Traffic_Sign_Classifier.ipynb**  contains the Program code to run ( how to run
+**Traffic_Sign_Classifier.ipynb** contains the Program code to run ( how to run
 see below )
 
 **Traffic_Sign_Classifier.html** Generated from Jupyter Notebook containing the
@@ -37,6 +37,14 @@ Code execution
 
 **writeup.md** contains the explanation how the solutions to the problem has
 been resolved.
+
+**traffic_signs.data-00000-of-00001 ** saved Model file
+
+**traffic_signs.index** saved Model file
+
+**traffic_signs.meta  **saved Model file
+
+**checkpoint ** used by Jupyter Notebook
 
  
 
