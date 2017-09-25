@@ -84,6 +84,16 @@ and also on the Layer2 convolution (10x10x128)
 As Loss function I have tried both the Mean of Cross Entropies, and the L2_Loss
 ( sum of squared entropies /2 )
 
+I have decided in this model to have lot more of Nodes, out of the convolution I
+get now 3200 Nodes.
+
+It means longer to Train, but is should give more chance to have an higher
+accuracy ( also because of the Dropout, that needs more connection because if
+one connection path is dropped, then it can find an other way , but for this
+purpose More Nodes, I think, are needed)
+
+ 
+
 My final model consisted of the following layers:
 
 | Layer               | Operation                         | Description                                  |
@@ -239,6 +249,11 @@ Augmenting 10000 of 34799
  
 
 **l2 loss , drop 50% ..50 epochs -- learning rate 0.0001**
+
+ 
+
+The main difference between the original Training Set and the Augmented is that
+these two lines ( accuracy training / validation ) are very close now
 
 ![](writeup_images/aug1.png)
 
