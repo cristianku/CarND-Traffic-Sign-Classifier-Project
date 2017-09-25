@@ -25,13 +25,15 @@ explained in details.
 List of the files
 -----------------
 
-T**raffic_Sign_Classifier.ipynb **   contains the Program code to run ( how to
+**README.md**
+
+**Traffic_Sign_Classifier.ipynb **   contains the Program code to run ( how to
 run see below )
 
-Traffic_Sign_Classifier.ipynb**.html**  Generated from Jupyter Notebook
-containing the Code execution
+**Traffic_Sign_Classifier.html**      Generated from Jupyter Notebook containing
+the Code execution
 
-**writeup.md**                               contains the explanation how the
+**writeup.md**                                contains the explanation how the
 solutions to the problem has been resolved.
 
  
@@ -39,19 +41,15 @@ solutions to the problem has been resolved.
 List of the folders
 -------------------
 
-**Test_images** contains the input images for the processing of lane detection
+**additional_test_images**
 
-**Test_images_output** is the folder containing the processed images using
+contains the Image used for testing the trained models. This images are both
+from German Traffic Signs from the web and picture taken in Warsaw from real
+Traffic Signs contains the input images for the processing of lane detection
 
- 
+**writeup_images **
 
-**Test_videos** contains the input videos for the processing of lane detection
-
-**Test_videos_output** contains the processed videos using **P1.ipynb**
-
- 
-
-**Writeup_images** contains the images for the writeup.md document
+contains the visualization images used in the **writeup.md**
 
  
 
@@ -68,7 +66,7 @@ if you haven't already.
 
 **Step 3:** Open Jupyter Notebook
 
-`> jupyter notebook`**P1.ipynb**
+`> jupyter notebook `**Traffic_Sign_Classifier.ipynb**
 
 A browser window will appear showing the contents of the current directory.
 
@@ -81,34 +79,59 @@ Package:<https://www.anaconda.com/download/>
 
  
 
+**Network train**
+-----------------
+
+For the network train has been used the EC2 amazon service using carnd AMI in
+the EU Frankfurt zone.
+
+ 
+
 **Project requirements check​**
 ------------------------------
 
  
 
-Have all project files been included with the submission?
+-   Have all project files been included with the submission?** Yes**
 
-**yes**, The project submission includes all required files
+-   Does the submission includes a basic summary of the data set ? **Yes**
 
-Does the pipeline for line identification take road images from a video as input
-and return an annotated video stream as output?
+-   Does the submission includes an exploratory visualization on the dataset?
+    **Yes**
 
-**Yes,** The output video is an annotated version of the input video.
+-   Does the submission includes an exploratory visualization on the dataset ?
+    **Yes**
 
-Has a pipeline been implemented that uses the helper functions and / or other
-code to roughly identify the left and right lane lines with either line segments
-or solid lines? (example solution included in the repository output:
-raw-lines-example.mp4)
+-   Does the submission describes the preprocessing techniques used and why
+    these techniques were chosen ? **Yes**
 
-**Yes,** In a rough sense, the left and right lane lines are accurately
-annotated throughout almost all of the video. Annotations can be segmented or
-solid lines
+-   Does The submission provides details of the characteristics and qualities of
+    the architecture, including the type of model used, the number of layers,
+    and the size of each layer. Visualizations emphasizing particular qualities
+    of the architecture are encouraged ? **Yes**
 
-Have detected line segments been filtered / averaged / extrapolated to map out
-the full extent of the left and right lane boundaries? (example solution
-included in the repository: P1_example.mp4)
+-   Does the submission describes how the model was trained by discussing what
+    optimizer was used, batch size, number of epochs and values for
+    hyperparameters **Yes**
 
-**Yes,** Visually, the left and right lane lines are accurately annotated by
-solid lines throughout most of the video.
+-   Does the submission describes the approach to finding a solution. Accuracy
+    on the validation set is 0.93 or greater ? **Yes**
+
+-   Does the submission includes five new German Traffic signs found on the web,
+    and the images are visualized. Discussion is made as to particular qualities
+    of the images or traffic signs in the images that are of interest, such as
+    whether they would be difficult for the model to classify ? **Yes**
+
+-   Does the submission documents the performance of the model when tested on
+    the captured images. The performance on the new images is compared to the
+    accuracy results of the test set ?** Yes**
+
+-   Does the submission include the top five softmax probabilities of the
+    predictions on the captured images and discussion how certain or uncertain
+    the model is of its predictions ? **Yes**
+
+ 
+
+ 
 
  
