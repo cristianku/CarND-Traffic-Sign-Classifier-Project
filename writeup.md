@@ -75,6 +75,15 @@ def normalize_color_scale(image_data):
 
 ### **2. Model architecture**
 
+I have choosed in My model to implement the Lenet network adding a Convolution
+1x1, and adding more filters on the Layer1 Convolution ( 32x32x64 as output ),
+and also on the Layer2 convolution (10x10x128)
+
+ 
+
+As Loss function I have tried both the Mean of Cross Entropies, and the L2_Loss
+( sum of squared entropies /2 )
+
 My final model consisted of the following layers:
 
 | Layer               | Operation                         | Description                                  |
@@ -110,6 +119,21 @@ My final model consisted of the following layers:
 
 ### **3. Model trainings:**
 
+As you can see below I have decided for a trainin rate very small 0.0001,
+because I prefer to do more epochs ( altough it takes longer ) , but to adjust
+the weights slower.
+
+ 
+
+Overall the problem here is that the Network learn very quickly to fit the
+Training Dataset, but when it comes to validation dataset, the fit is not quite
+good enogh ( should be at least 0.93 to pass the test ).
+
+I have tried introducing dropouts from 10% to 70%, it helps but not enough.
+
+As you can see later the solution is to Augment the images introducing rotation
+and other effects...
+
  
 
 #### **The first try is by using a drop of 10% , learning rage of 0.0001 , 10 epochs, and a batch_size of 256:**
@@ -123,7 +147,7 @@ EPOCH 10 ... Training ( Loss= 0.180, Acc= 0.951 ) Validation ( Loss= 0.661, Acc=
 
 As you can see the Accuracy on the training is .95 quite high, but the model is
 overfitting so it is not able to predict on the Validation set correctly ( .81 ,
-very low )
+too low )
 
  
 
@@ -144,7 +168,7 @@ EPOCH 50 ... Training ( Loss= 0.009, Acc= 0.998 ) Validation ( Loss= 0.450,
 
  
 
-![](images/try2.png)
+![](writeup_images/try2.png)
 
 More epochs… more optimization cycles … so that the Training accuracy is now
 .**998** and the validation accuracy is .**898** .. a little bit better but
@@ -169,14 +193,9 @@ EPOCH 50 ... Training ( Loss= 2.355, Acc= 0.995 ) Validation ( Loss= 188.300,
 
  
 
-![](images/try3.png)
+![](writeup_images/try3.png)
 
 **But as we can see the L2_LOSS doesn’t make any touchable difference**
-
- 
-
-**Other tests you can see inside of the Jupyter Notebook, test that gets even
-worse results.**
 
 **​**
 
@@ -188,7 +207,7 @@ augmentation.**
 I have applied some **rotations**, **translations**, **shears** and **camera
 brightnesses**.
 
-This is to f**orce the network to learn to recognize signs** that are from
+This is to **force the network to learn to recognize signs** that are from
 different prospectives or/and are less readable ( example when raining or when
 the sun shines )
 
@@ -199,7 +218,7 @@ Here you can see an example of augmentation:
 
  
 
-![](images/augm_images.png)
+![](writeup_images/augm_images.png)
 
  
 
@@ -221,7 +240,7 @@ Augmenting 10000 of 34799
 
 **l2 loss , drop 50% ..50 epochs -- learning rate 0.0001**
 
-![](images/aug1.png)
+![](writeup_images/aug1.png)
 
 EPOCH 10 ... Training ( Loss= 201.824, Acc= 0.751 ) Validation ( Loss= 193.306,
 Acc= 0.758 )  
@@ -234,7 +253,7 @@ Acc= 0.906 )
 EPOCH 50 ... Training ( Loss= 17.973, Acc= 0.967 ) Validation ( Loss= 124.102,
 Acc= **0.918** )
 
-Quite good… but it is still not enough **( .918 ).**
+**Quite good… but it is still not enough ( .918 ).**
 
 The ​Training accuracy is ( .967 ) and the Validation (.918 )
 
@@ -244,11 +263,17 @@ It means that the network is a little bit **OVER-FITTING.**
 
  
 
-### Maybe we just need need to **lower the batch size** in order to do more optimization cycles ?
+**trying with more epochs...100 epochs and adjusting the learning rate from
+0.0001 to 0.001:**
+
+I think and other problem was also that the learning rate was too small , it
+means longer to train.. too long.
 
  
 
  
+
+**​**
 
  
 
@@ -266,27 +291,77 @@ It means that the network is a little bit **OVER-FITTING.**
 Here are five German traffic signs that I found on the web + some real images
 from my cam:
 
-\~ alt text
+1
 
-~   alt text
+![](additional_test_images/02.png)
 
-~   alt text
+2
 
-**The first image might be difficult to classify because ...**
+![](additional_test_images/09_1.jpg)
+
+3
+
+![](additional_test_images/10.png)
+
+4
+
+![](additional_test_images/12_priority.png)
+
+5
+
+![](additional_test_images/13.png)
+
+6
+
+![](additional_test_images/13_2.jpg)
+
+7
+
+![](additional_test_images/14.png)
+
+8
+
+![](additional_test_images/14_1.jpg)
+
+9
+
+![](additional_test_images/15.png)
+
+10
+
+![](additional_test_images/25.png)
+
+11
+
+![](additional_test_images/27.png)
 
  
 
-### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
+ 
+
+**The 2nd might be difficult to classify because of the men drawing inside .**
+
+**The 6th might be difficult because is a “destroyed” sign**
+
+ 
 
 Here are the results of the prediction:
 
-| Image         | Prediction    |
-|---------------|---------------|
-| Stop Sign     | Stop sign     |
-| U-turn        | U-turn        |
-| Yield         | Yield         |
-| 100 km/h      | Bumpy Road    |
-| Slippery Road | Slippery Road |
+| Number | Image                                        | Prediction |
+|--------|----------------------------------------------|------------|
+| 1      | Speed limit 50 km/h                          |            |
+| 2      | No Passing                                   |            |
+| 3      | No passing for vehicles over 3.5 metric tons |            |
+| 4      | Priority Road                                |            |
+| 5      | Yield                                        |            |
+| 6      | Yield                                        |            |
+| 7      | Stop                                         |            |
+| 8      | Stop                                         |            |
+| 9      | No Passing                                   |            |
+| 10     | Road Work                                    |            |
+| 11     | Pedestrians                                  |            |
+
+ 
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an
 accuracy of 80%. This compares favorably to the accuracy on the test set of ...
